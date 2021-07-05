@@ -149,8 +149,14 @@ $ port install httpie
 
 #### Linux
 
-Most Linux distributions provide a package that can be installed using the
-system package manager, for example:
+HTTPie is available on the [Snap Store](https://snapcraft.io/http):
+
+```bash
+$ snap install http
+```
+
+
+And most Linux distributions provide a package that can be installed using the system package manager, for example:
 
 ```bash
 # Debian, Ubuntu, etc.
