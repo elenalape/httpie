@@ -619,7 +619,7 @@ Please note that with the [request items](#request-items) data field syntax, com
 In such cases, it’s better to pass the full raw JSON data via [redirected input](#redirected-input), for example:
 
 ```bash
-$ echo '{"hello": "world"}' | http POST pie.dev/post
+$ echo -n '{"hello": "world"}' | http POST pie.dev/post
 ```
 
 
@@ -1276,7 +1276,7 @@ $ grep '401 Unauthorized' /var/log/httpd/error_log | http POST pie.dev/post
 You can use `echo` for simple data:
 
 ```bash
-$ echo '{"name": "John"}' | http PATCH pie.dev/patch X-API-Token:123
+$ echo -n '{"name": "John"}' | http PATCH pie.dev/patch X-API-Token:123
 ```
 
 
@@ -1322,7 +1322,7 @@ Passing data through `stdin` **can't** be combined with data fields specified on
 
 
 ```bash
-$ echo 'data' | http POST example.org more=data   # This is invalid
+$ echo -n 'data' | http POST example.org more=data   # This is invalid
 ```
 
 
